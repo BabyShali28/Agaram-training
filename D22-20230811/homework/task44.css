@@ -1,0 +1,16 @@
+
+            h1{
+                border: 15px;
+                background-color: chartreuse;
+                color: aliceblue;
+            }
+            
+            .firstp{
+                color: blue;
+            }
+            .secondp{
+                color: rgb(238, 18, 18);
+            }
+            .thirdp{
+                color: blueviolet;
+            }

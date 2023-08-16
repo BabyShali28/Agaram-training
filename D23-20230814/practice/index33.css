@@ -1,0 +1,34 @@
+body{
+    background-color: cornflowerblue;
+    background-image height:100px url(/home/babyshali/Documents/az.jpeg);
+    backdrop-filter:blur(8px);
+    
+    
+}
+h1{
+    text-align: center;
+    color:navy
+}
+h3{
+    color: rgb(173, 5, 165);
+}
+.starting{
+    width:100px;
+}
+.hobb{
+    width:60;
+}
+input{
+    border-top-left-radius: 10px;
+}
+textarea{
+    border-top-left-radius: 10px;
+}
+button{
+    width: 140;
+    height: 50;
+    background-color: rgb(218, 137, 238);
+    text-align: center;
+    position: absolute;
+    left: 600px;
+}
