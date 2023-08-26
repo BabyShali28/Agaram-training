@@ -1,0 +1,141 @@
+<!-- <html>
+    <head>
+        <style>
+        .box1{
+            /* border:3px solid rgb(243, 235, 235); */
+            padding:30px;
+            margin-top:0px;
+            text-align: center;
+            
+        } 
+        .box2{
+            
+            padding: 30;
+            margin-top: 10px;
+            text-align: center;
+            
+        }
+        .box3{
+            
+            padding: 20px 230px;
+            /* border:3px solid black; */
+            text-align: center;
+            margin-top: 10px;
+            grid-area: box3;
+            
+        }
+        .box4{
+            padding:80px 290px;
+            /* border:3px solid black; */
+            margin-top: 10px;
+            grid-area: box4;
+            text-align: center;
+        }
+        .box5{
+            padding:50px 50px;
+            /* border:3px solid black; */
+            margin-top: 10px;
+            margin-right: 10px;
+            grid-area: box5;
+            text-align: center;
+        
+        }
+        .box6{
+            padding:20px;
+            /* border:3px solid black; */
+            margin-top: 10px;
+            text-align: center;
+        }
+        .boss{
+            display:grid;
+            grid-template-areas:"box5 box3" "box5 box4";
+        }
+        
+        .box1,.box2,.box3,.box4,.box5,.box6{
+            background-color: dimgrey;
+        }
+        .box{
+                /* border:3px solid black; */
+                padding:30px;
+        }       
+        </style>
+    </head>
+    <body>
+    <div class="box">
+        <div class="box1"><b>header</b></div>
+        <div class="box2"><b>nav</b></div>
+        <div class="boss">
+            <div class="box3"><b>aside</b></div>
+            <div class="box4"><b>section</b></div>
+            
+            <div class="box5"><b>main</b></div>
+        </div> 
+        <div class="box6"><b>footer</b></div>
+    </div>  
+    </body>
+</html> -->
+
+
+<html>
+    <head>
+        <style>
+            header,.footer{
+                border:1px solid black;
+                padding:50px;
+                margin:10px 10px 10px 10px;
+                text-align: center;
+            }
+
+            .aside1{
+                border:1px solid black; 
+                padding:30px 200;
+                margin:10px 10px 0px 10px;
+                text-align: center;
+            }
+            .aside,.section{
+                border:1px solid black; 
+                padding:75px 630%;
+
+            }
+            .section{
+                margin: 10px 0px 0px 0px;
+                
+                
+            }
+            
+            
+            .as,.main{
+                display: inline-block;
+            }
+            .main{
+                border:1px solid black; 
+                vertical-align: top;
+                padding:170px 300px;
+                margin:0px 10px 0px 10px;
+            }
+            nav{
+                border:1px solid black;
+                margin:10px 10px 10px 10px;
+                padding:30px;
+                text-align: center;
+            }
+            header,nav,.main,.aside,.section,.aside1,.footer{
+                background-color: dimgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <header>Header</header>
+        <nav>Nav</nav>
+        <div class="mas">
+            <div class="main">main</div>
+            <div class="as">
+                <div class="aside">aside</div>
+                <div class="section">section</div>
+            </div>
+        <div class="aside1">aside</div>
+        <div class="footer">Footer</div>
+        </div>
+
+    </body>
+</html>
