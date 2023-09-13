@@ -1,4 +1,4 @@
-#method1
+
 mail_id=input("enter the email id ")
 password=input("enter the password")
 email_id="shalibaby15@gmail.com"
@@ -14,7 +14,3 @@ elif mail_id == email_id and password == email_password:
 else :
     print ("you are not authenticated")
 
-#method2
-mail_id=input("enter the email id ")
-password=input("enter the password")
-if mail_id != 

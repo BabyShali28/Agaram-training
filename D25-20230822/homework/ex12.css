@@ -1,0 +1,91 @@
+header{
+    border:1px solid black;
+}
+.pink{
+    height:10%;
+    background-color: fuchsia;
+    margin:30px 50px 10px 50px;
+}
+.query,.get{
+    display: inline-block;
+    height:40%;
+    width:15%;
+}
+footer{
+    height:10%;
+    margin:0% 4% 2% 4%;
+    background-color: aliceblue;
+    color: black;
+}
+section{
+    margin:1% 4% 1% 4%; 
+    height:65%;
+}
+.article,.related{
+    display: inline-block;
+    height:100%;
+    
+}
+.article{
+    width:73.3%;
+    
+    background-color: aliceblue;
+    margin:0px 0px 0px 0px;
+}
+.related{
+    width:26%;
+    vertical-align: top;
+    background-color: fuchsia;
+}
+header{
+    background-color: grey;
+    color: black;
+    
+}
+.home,.our,.project,.contact{
+    color: black;
+    display: inline-block;
+    height:40;
+    width:15%;
+}
+.all{
+    margin:1% 0% 1% 0%; 
+}
+.query{
+    background-color: rgb(160, 193, 221);
+    color: darkslategray;
+}
+.get{
+    background-color: black;
+    color: aliceblue;
+    width:5%;
+    
+}
+*{
+    margin:0px;
+    padding:0px;
+}
+h1,h2{
+    text-align: center;
+}
+h1,h2,h3{
+    font-style: italic;
+    font-weight: bold;
+    font-family:Georgia;
+}
+p{
+    color: darkslategray;
+}
+.list{
+    margin:1% 2% 1% 7%;
+    color: black;
+    
+}
+.home,.abc{
+    margin:2% 2%;
+
+}
+.blue{
+    color: cornflowerblue;
+    text-decoration:underline;
+}

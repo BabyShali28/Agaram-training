@@ -1,35 +1,35 @@
 #assign new variable
-'''number=int(input("enter the number:"))
+number=int(input("enter the number:"))
 reminder=number%2
 if reminder==0:
     print ("even number")
 else:
-    print ("odd number")'''
+    print ("odd number")
 
 
 #without assign new variable
-'''number=int(input("enter the number:"))
+number=int(input("enter the number:"))
 if number%2==0:
     print ("even")
 else:
-    print ("odd")'''
+    print ("odd")
 
 #assign new variable
-'''number1=int(input("enter the number :"))
+number1=int(input("enter the number :"))
 number2=int(input("enter the number :"))
 num=number1%number2
 if num==0:
     print ("yes")
 else:
-    print ("no")'''
+    print ("no")
 
 #without assign new variable
-'''number1=int(input("enter the number :"))
+number1=int(input("enter the number :"))
 number2=int(input("enter the number :"))
 if number1%number2==0:
     print ("yes")
 else:
-    print ("no")'''
+    print ("no")
 
 year=int(input("enter the year:"))
 if (year%400==0 and year%100==0)or(year%4==0 and year%100!=0):

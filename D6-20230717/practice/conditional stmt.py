@@ -1,10 +1,10 @@
-'''gender="male"
+gender="male"
 if gender=="male":
     print ("BLUE")               
 else:
-    print("pink")'''
+    print("pink")
 
-'''gender="male"
+gender="male"
 if gender=="male":
     print("blue")
 elif gender=="female":
@@ -12,10 +12,10 @@ elif gender=="female":
 elif gender=="transgender":
     print("lavender")
 else:
-    print("invalid type")'''
+    print("invalid type")
 
 
-'''gender=input("enter gender:")
+gender=input("enter gender:")
 if gender=="male":
     print("blue")
 elif gender=="female":
@@ -23,7 +23,7 @@ elif gender=="female":
 elif gender=="transgender":
     print("lavender")
 else:
-    print("invalid type")'''
+    print("invalid type")
 
 total_mark=int(input("enter the mark:"))
 if total_mark>92:
