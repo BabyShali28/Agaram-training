@@ -37,6 +37,10 @@ personal_details:{father_name:"antony",
                     address:{"door no":"13/8E13","street name":"kodimunai",
                     village_name:"colachel"}}}
 
+
+
+// resume.experience[0].role="senior_developer"
+// console.log(resume)
     // console.log(resume.email)
 // resume.hard_skills.push("manage")
 // for(i=0;i<resume.edu_quali.length;i++){
@@ -52,7 +56,8 @@ personal_details:{father_name:"antony",
 
 
 
-// let a=["sunday","monday","tuesday"]
+let a=["sunday","monday","tuesday"]
+
 // // console.log(a[2])
 // // console.log(a.length)
 // // console.log(a[a.length-1])
@@ -89,7 +94,8 @@ personal_details:{father_name:"antony",
 // for (i=0;i>-10;i--){
 //     console.log(i)
 // }
-// a=["monday","tuesday","wednesday"]
+a=["monday","tuesday","wednesday"]
+
 // for(i=1;i<a.length;i++){
 //     console.log(a[i])
 // }
@@ -107,13 +113,41 @@ personal_details:{father_name:"antony",
 //     console.log(a[i].level)
 // }
 
-function find_level(education){
-    for(i=0;i<education.length;i++){
+// function find_level(education){
+//     for(i=0;i<education.length;i++){
     
-        console.log(i+1,education[i].level)
-    // console.log(i+1)
+//         console.log(i+1,education[i].level)
 
-        // console.log(education[i].level)
-    }
-}
-find_level(resume.edu_quali)
+//     }
+// }
+// find_level(resume.edu_quali)
+
+
+
+// function find_level(education){
+//     for(i=education.length-1;i>=0;i--){
+    
+//         console.log(i,education[i].level)
+//     }
+// }
+// find_level(resume.edu_quali)
+
+// localStorage.setItem("name","agaram")
+// // SessionStorage.setItem("name","agaram")
+//     console.log(localStorage.getItem("name"))
+
+// localStorage.setItem("name",true)
+// m=localStorage.getItem("name")
+//     console.log(typeof(m))
+//     console.log(m)
+
+var alpha=["a","b","c"]
+var stringlist=JSON.stringify(alpha)
+localStorage.setItem("alpha",stringlist)
+    console.log(localStorage.getItem("alpha"))
+
+    
+var list_1=localStorage.getItem("alpha")
+var clist=JSON.parse(list_1)
+    console.log(clist[1])
+

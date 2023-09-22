@@ -1,0 +1,16 @@
+body{
+    height:50%;
+    text-align: center;
+}
+input{
+    height:10%;
+}
+button{
+    height:15%;
+    background-color:rgb(117, 223, 56);
+}
+
+
+#login,#register,#home{
+    display:none;
+}

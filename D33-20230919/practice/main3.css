@@ -1,0 +1,15 @@
+body{
+    height:50%;
+    text-align: center;
+}
+input{
+    height:10%;
+}
+button{
+    height:8%;
+}
+
+
+#login,#register,#home{
+    display:none;
+}
