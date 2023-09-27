@@ -1,53 +1,63 @@
-/* *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box; */
-/* } */
+*{
+    /* margin:0;
+    padding:0; */
+    /* box-sizing: border-box; */
+}
 header{
-    background-color: lightpink;
-    height:50%;
+    /* background-color:FBA1B7; */
+    height:40%;
     text-align: center;
     
 }
 .per,.pto{
     display:inline-block;
 }
-.pto{
-    border:1px solid black;
-    width:30%;
-    margin-top:10px;
+.pto img{
+    /* border:1px solid black; */
+    width:134%;
+    margin-top:20px;
+    height:75%;
+    border-radius: 100%;
+    
 }
 .per{
     width:60%;
     margin:10px 10px 10px 10px;
-    border:1px solid blue;
+    /* border:1px solid blue; */
     vertical-align: top;
+    height:75%;
 }
 
 .object{
-    border:1px solid black;
-    height:20%;
+    /* border:1px solid black; */
+    height:10%;
+    /* margin-top:10%; */
 }
 .left,.right{
     display:inline-block;
-    border:1px solid black; 
+    /* border:1px solid black;  */
     
 }
 .left{
     width:50%;
     vertical-align: top;
+    /* height:50%; */
 }
 .right{
     width:45%;
     height:50%;
 }
 section{
-    height:200%;
-    border:1px solid green;
+    height:150%;
+    /* border:1px solid green; */
     
 }
 h3{
-    color: crimson;
+    /* color: crimson; */
+    color:FF6666;
+}
+h1{
+    color:crimson;
 }
 .box{
     margin:10px 10px 10px 10px;
@@ -57,4 +67,17 @@ img{
     height:100%;
     width:50%;
 }
-
+.in_obj{
+    margin-left:5%;
+    /* margin-right:20%; */
+}
+.projects{
+    height:50%;
+    width:100%;
+}
+.p1,.p2{
+    margin-left:12%;
+}
+.ex1{
+    margin-left:6%;
+}
