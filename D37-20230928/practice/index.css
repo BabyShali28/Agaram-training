@@ -1,0 +1,55 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.para{
+    width:500px;
+    height:500px;
+    background-color: rgb(168, 233, 103);
+    border:1px solid rgb(22, 33, 189);
+    margin:10px;
+    padding:50px;
+    display:inline-block;
+    
+}
+body{
+    background-color: aqua;
+}
+p{
+    margin:10px;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+ul{
+    border:1px solid green;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+li{
+    display:inline-block;
+    border:1px solid red;
+    padding:10px;
+    /* margin:10px; */
+}
+.main{
+    background-color: blueviolet;
+    padding:10px;
+    width:30px;
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.big{
+    background-color: chartreuse;
+    padding:30px;
+    position:relative;
+}
+.move{
+    background-color: chocolate;
+    padding:30px;
+    width:30px;
+    margin:10px 10px 10px 10px;
+    display:inline-block;
+}

@@ -1,17 +1,18 @@
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="main.css">
         <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
         
         
     </head>
-    <body>
+    <body class="text-bg-info p-3">
         <!-- <div id="wel"><p>Welcome user</p></div>  -->
-        <h3>welcome<p id=wel>user</p></h3>
-<button type="button" onclick="logout()">logout</button>
-<table border="1" class="table">
-    <thead>
+        <h3 class="fs-1">welcome<p id=wel>user</p></h3>
+<button type="button" class="btn btn-secondary btn-lg" onclick="logout()">logout</button>
+<table border="1" class="table table-success table-striped">
+    <thead class="table-dark">
         <tr>
             <th>name</th>
             <th>email</th>
@@ -20,14 +21,15 @@
 
         </tr>
     </thead>
-        <tbody id="list_table_body">
+        <tbody id="list_table_body" class="table-danger">
          
             
         </tbody>
     
 </table>
     </body>
-    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
     <script>secure()</script>
     <script>oldlogin()</script>
 </html>

@@ -66,9 +66,7 @@ function login(){
 
               if ((datain[i].Email==email) && (datain[i].Password==emailpassword))
               {
-                
-                    alert ("login successfully")
-                  
+                  alert("login successfully")
                   isuser=true
                   
                   
@@ -106,8 +104,8 @@ function tableadd() {
             htmldata = htmldata + `<tr>
                                 <td> ${datain[i].Name} </td>
                                 <td> ${datain[i].Email} </td>
-                                <td><button class="btn btn-warning" onclick="update('${datain[i].Email}')" >&#9998</button></td>
-                                <td><button onclick="del('${datain[i].Email}')"class="btn btn-warning">&#128465</button></td>
+                                <td><button onclick="update('${datain[i].Email}')">&#9998</button></td>
+                                <td><button onclick="del('${datain[i].Email}')">&#128465</button></td>
                                 </tr>`
         }
         // console.log(datain[i].Name)

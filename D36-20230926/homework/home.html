@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    
+
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+
+        
+    </head>
+    <body>
+        <!-- <div id="wel"><p>Welcome user</p></div>  -->
+        <h3>welcome<p id=wel>user</p></h3>
+<button type="button" onclick="logout()">logout</button>
+<table border="1" class="table">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>update</th>
+            <th>delete</th>
+
+        </tr>
+    </thead>
+        <tbody id="list_table_body">
+         
+            
+        </tbody>
+    
+</table>
+    </body>
+    <script src="index.js"></script>
+    <!-- <script>secure()</script>
+    <script>oldlogin()</script> -->
+</html>
