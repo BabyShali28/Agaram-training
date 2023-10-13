@@ -64,8 +64,8 @@
               <label  class="col-sm-2 col-form-label">skills</label>
               <div class="col-sm-10">
                 <input type="text" id="skill_name" class="form-control">
-                <button type="button" onclick="multiple_data('skills','skill_name','lists')">add</button><br><br>
-                <div class="d-flex flex-row flex-wrap" gap=10px id="lists"></div>
+                <button type="button" onclick="multiple_data('skills','skill_name','lis')">add</button><br><br>
+                <div class="d-flex flex-row flex-wrap" gap=10px id="lis"></div>
               </div>
             </div>
                             <!-- ...langu..... -->
@@ -73,8 +73,8 @@
               <label  class="col-sm-2 col-form-label">Languages</label>
               <div class="col-sm-10">
                 <input type="text" id="language" class="form-control">
-                <button type="button" onclick="multiple_data('Languages','language','list1')">add</button><br>
-                <div class="d-flex flex-row flex-wrap" gap=10px id="list1"></div>
+                <button type="button" onclick="multiple_data('Languages','language','lis1')">add</button><br>
+                <div class="d-flex flex-row flex-wrap" gap=10px id="lis1"></div>
               </div>
             </div>
             <!-- >>>>>>>>>>>>educational>>>>>>>>>.... -->
@@ -97,8 +97,66 @@
               </div>
                 <div class="d-flex flex-row flex-wrap" gap=10px id="list"></div>
               </div>
-            
-              
+
+
+
+              <!-- .........edu dis.... -->
+              <div class="d-flex flex-row flex-wrap">
+                  <table border="1">
+                    <thead>
+                      <tr>
+                        <th>institute</th>
+                        <th>level</th>
+                        <th>year</th>
+                        <th>percentage</th>
+                        <th>remove</th>
+                      </tr>
+                    </thead>
+                    <tbody id="Educational"></tbody>
+                  </table>
+              </div>
+            <!-- ............edu........ -->
+
+              <!-- .............project>............... -->
+
+<div class="mb-3 row">
+  <label  class="col-sm-1 col-form-label">project details </label>
+  <div class="col-sm-1">
+    <input type="text" id="role" name="role" class="form-control" placeholder=" role" onkeyup="mularrayhandle(this)">
+  </div>
+  <div class="col-sm-1">
+    <input type="text" id ="company" name="company" class="form-control" placeholder="company" onkeyup="mularrayhandle(this)">
+  </div>
+  <div class="col-sm-1">
+    <input type="text" id="des" name="des" class="form-control" placeholder="description" onkeyup="mularrayhandle(this)">
+  </div>
+  <div class="col-sm-1">
+    <input type="text" id="year" name="year" class="form-control" placeholder="year" onkeyup="mularrayhandle(this)">
+  </div>
+  <div class="col-sm-2">
+    <button type="button" onclick="multiple_data('projects')">add</button>
+  </div>
+    <div class="d-flex flex-row flex-wrap" gap=10px id="list1"></div>
+  </div>
+
+  <div class="d-flex flex-row flex-wrap">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>role</th>
+          <th>company</th>
+          <th>description</th>
+          <th>year</th>
+          <th>remove</th>
+        </tr>
+      </thead>
+      <tbody id="projects"></tbody>
+    </table>
+</div>
+
+<!-- .....<<<<<<<<<<,project..... -->
+
+              <!-- ..........final submit.... -->
                 <button type="button"  onclick="final()" class="btn btn-primary" id="fin">add</button>
               
 

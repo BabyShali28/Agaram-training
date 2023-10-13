@@ -37,7 +37,7 @@ function test(e, per_data) {
 // }
 
 // ............function add null value......
-function multiple_data(p_key, e_id,divv) {
+function multiple_data(p_key, e_id,dis) {
     if (!details[p_key]) {
         details[p_key] = []
     }
@@ -45,26 +45,32 @@ function multiple_data(p_key, e_id,divv) {
         let var_name = document.getElementById(e_id).value
         // console.log(var_name)
         if (var_name == "") {
-            alart("invalid")
+            alert("invalid")
         }
 
         else {
             details[p_key].push(document.getElementById(e_id).value)
         }
         set = details[p_key]
-        skill_display(set, p_key,divv)
+        skill_display(set, p_key,dis)
         document.getElementById(e_id).value = ""
 
     }
     else {
         details[p_key].push(temp);
+        console.log(details[p_key])
+        edu_Dis(details[p_key],p_key)
         let keys = Object.keys(temp)
+        console.log(keys)
         for (i = 0; i < keys.length; i++) {
+            
             let each = keys[i];
-            console.log(each)
+            // console.log(each)
             document.getElementById(each).value = "";
         }
+        
         temp = {}
+        
     }
     display()
 }
@@ -75,15 +81,16 @@ function display() {
 }
 
 
-function skill_display(skill, p_key,id3) {
+function skill_display(skill, p_key,dis1) {
     // console.log(skill)
     let htmldata = ""
-    for (i = 0; i < skill.length; i++) {
+    // console.log(skill)
+    for (i = 0;i<skill.length; i++) {
         // console.log(skill[i])
         htmldata = htmldata + `<span class="btn btn-primary">
         ${skill[i]}
         
-        <span type="button" onclick="dlt('skills','${skill[i]}')">
+        <span type="button" onclick="dlt('${p_key}','${skill[i]}','${dis1}')">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
                 <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
@@ -92,23 +99,26 @@ function skill_display(skill, p_key,id3) {
         </span>`
 
     }
-    document.getElementById(id3).innerHTML=htmldata
+    document.getElementById(dis1).innerHTML=htmldata
 }
 
-function dlt(p_id, del_skill) {
-    // alert(p_id)
-
-    let list = details[p_id]
-    // console.log(list)
+function dlt(p_id, del_skill,diss) {
+    alert(p_id)
+    // let lists={...details[p_id]}
+    let lists = details[p_id]
+    console.log(lists)
     let newlist = []
-    for (let i = 0; i < list.length; i++) {
-        if (del_skill != list[i]) {
-            newlist.push(list[i])
+    for (let i = 0; i < lists.length; i++) {
+        if (del_skill != lists[i]) {
+            newlist.push(lists[i])
         }
 
     }
+    // let lists=details[p_id] 
     details[p_id] = newlist;
-    skill_display(details[p_id],p_id,)
+    // console.log(lists)
+    skill_display(details[p_id] ,p_id,diss)
+    // console.log(details[p_id])
     display()
     // console.log(newlist)
     // details[p_node].push(newlist)
@@ -116,9 +126,66 @@ function dlt(p_id, del_skill) {
 
 function mularrayhandle(ele) {
     temp[ele.name] = ele.value;
-    console.log(temp)
+    // console.log(temp)
 }
 
+
+function edu_Dis(set,p_key){
+    let htmld=""
+    
+    // console.log(p_key)
+    for (var i=0;i<set.length;i++){
+        let htm=""
+        for (var x in set[i]){
+        // console.log(x)
+        // console.log(set[i]) 
+        htm=htm+`<td>${set[i][x]}</td>` 
+
+        // console.log(set[i][x])
+    }
+    htmld=htmld + `<tr>` + htm + `<td><button type=button onclick="eduDel('${i}','${p_key}')">Delete</button></td>`+`</tr>`
+    }
+    document.getElementById(p_key).innerHTML=htmld
+}
+
+
+function eduDel(ind,p_id){
+    console.log(p_id)
+    // alert("abc")
+    // console.log(p_id)
+    let edu=details[p_id]
+    // console.log(edu)
+    let ne=[]
+    for (i=0;i<edu.length;i++){
+        // console.log(ind)
+        // alert("abc")
+        if(i!=ind){
+            // alert("xyz")
+        
+        // console.log(edu[i])
+        ne.push(edu[i])
+    details[p_id]=ne
+    console.log(details[p_id])
+    edu_Dis(details[p_id],p_id)
+    display()
+        // console.log(ne)
+
+        // console.log(neww)
+        }
+
+    }
+   
+}
+
+
+// details[p_key].push(temp);
+//         let keys = Object.keys(temp)
+//         for (i = 0; i < keys.length; i++) {
+//             let each = keys[i];
+//             // console.log(each)
+//             document.getElementById(each).value = "";
+//         }
+//         temp = {}
 
 // function mularrayhandle1(p_key){
 //     if(!details[p_key]){
@@ -128,6 +195,8 @@ function mularrayhandle(ele) {
 //     display()
 // }
 
+
+// ...............final submit.............
 function final() {
     $.ajax({
         type: "POST",
@@ -194,7 +263,7 @@ function displayresDetails() {
 }
 
 
-
+ 
 function remove(ele) {
     // alert(ele)
     $.ajax({
@@ -246,15 +315,15 @@ function getEBYid(id1) {
 
             let personal = datas1.personal_details
             // console.log(personal)
-            $("#father").html(personal.father_name)
+            // $("#father").html(personal.father_name)
 
-            let skill = datas1.skills
+            let skillget = datas1.skills
             // console.log(skill)
 
             let html = ""
-            for (i = 0; i < skill.length; i++) {
+            for (i = 0; i < skillget.length; i++) {
                 // console.log(skill[i])
-                html = html + `<li>${skill[i]}
+                html = html + `<li>${skillget[i]}
                 </li>`
                 // console.log(html)
 
@@ -262,7 +331,7 @@ function getEBYid(id1) {
             document.getElementById("sskil").innerHTML = html
 
 
-            edu = datas1.Educational
+            let edu = datas1.Educational
             console.log(edu)
             let html1 = ""
             for (i = 0; i < edu.length; i++) {
@@ -276,6 +345,19 @@ function getEBYid(id1) {
             }
 
             document.getElementById("educat").innerHTML = html1
+// .......project.................
+        proj=datas1.projects
+        let proTab=""
+        for (i = 0; i < proj.length; i++) {
+            proTab = proTab + `<tr>
+                            <td>${proj[i].role}</td>
+                            <td>${edu[i].company}</td>
+                            <td>${edu[i].des}</td>
+                            <td>${edu[i].year}</td>
+                         </tr>`
+        }
+        document.getElementById("proj").innerHTML = proTab
+
         },
         error: function (err) {
             console.log(err)
