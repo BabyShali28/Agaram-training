@@ -15,10 +15,10 @@ header{
 }
 .pto img{
     /* border:1px solid black; */
-    width:134%;
+    /* width:134%; */
     margin-top:20px;
     height:75%;
-    border-radius: 100%;
+    border-radius:100%;
     
 }
 .per{
@@ -42,10 +42,11 @@ header{
 .left{
     width:50%;
     vertical-align: top;
+    margin-left:9%;
     /* height:50%; */
 }
 .right{
-    width:45%;
+    width:33%;
     height:50%;
 }
 section{
@@ -66,7 +67,7 @@ h1{
 }
 img{
     height:100%;
-    width:50%;
+    /* width:40%; */
 }
 .in_obj{
     margin-left:5%;
@@ -84,4 +85,8 @@ img{
 }
 p{
     font-size:large;
+}
+
+.object h3{
+    margin-left:3%;
 }

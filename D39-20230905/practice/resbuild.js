@@ -164,16 +164,17 @@ function eduDel(ind,p_id){
         
         // console.log(edu[i])
         ne.push(edu[i])
-    details[p_id]=ne
-    console.log(details[p_id])
-    edu_Dis(details[p_id],p_id)
-    display()
+    
         // console.log(ne)
 
         // console.log(neww)
         }
 
     }
+    details[p_id]=ne
+    console.log(details[p_id])
+    edu_Dis(details[p_id],p_id)
+    display()
    
 }
 
@@ -211,16 +212,7 @@ function final() {
             console.log(add)
 
             window.location = "show.html"
-            //         datas=JSON.parse(add)
-            //         console.log(datas)
-            // let htmld=""
-            // for (i=0;i<datas.data.length;i++){
-            // htmld=htmld+`<tr>
-            //                 <td>${datas.data[id]}</td>
-            //                 <td>${datas.data[user]}</td>
-            //             </tr>`
-            // }
-            // document.getElementById("show").innerHTML=htmld
+            
         },
 
         error: function (err) {
@@ -312,10 +304,11 @@ function getEBYid(id1) {
             $("#name").html(datas1.name)
             $("#obj").html(datas1.objective)
             $("#mid").html(datas1.emil)
-
+            $("#addr").html(datas1.address)
+            $("#phn").html(datas1.mobile_no)
             let personal = datas1.personal_details
             // console.log(personal)
-            // $("#father").html(personal.father_name)
+            $("#fath").html(personal.father_name)
 
             let skillget = datas1.skills
             // console.log(skill)
@@ -341,19 +334,20 @@ function getEBYid(id1) {
                             <td>${edu[i].level}</td>
                             <td>${edu[i].year}</td>
                             <td>${edu[i].percentage}</td>
+                            
                          </tr>`
             }
 
             document.getElementById("educat").innerHTML = html1
 // .......project.................
         proj=datas1.projects
+        console.log(proj)
         let proTab=""
-        for (i = 0; i < proj.length; i++) {
+        for (i = 0; i<proj.length; i++) {
             proTab = proTab + `<tr>
-                            <td>${proj[i].role}</td>
-                            <td>${edu[i].company}</td>
-                            <td>${edu[i].des}</td>
-                            <td>${edu[i].year}</td>
+                            <td>${proj[i].title}</td>
+                            <td>${edu[i].desc}</td>
+                            <td>${edu[i].yr}</td>
                          </tr>`
         }
         document.getElementById("proj").innerHTML = proTab
