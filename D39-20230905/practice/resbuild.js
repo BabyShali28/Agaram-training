@@ -306,6 +306,7 @@ function getEBYid(id1) {
             $("#mid").html(datas1.emil)
             $("#addr").html(datas1.address)
             $("#phn").html(datas1.mobile_no)
+            $("#para").html(datas1.extra)
             let personal = datas1.personal_details
             // console.log(personal)
             $("#fath").html(personal.father_name)
@@ -346,8 +347,8 @@ function getEBYid(id1) {
         for (i = 0; i<proj.length; i++) {
             proTab = proTab + `<tr>
                             <td>${proj[i].title}</td>
-                            <td>${edu[i].desc}</td>
-                            <td>${edu[i].yr}</td>
+                            <td>${proj[i].desc}</td>
+                            <td>${proj[i].yr}</td>
                          </tr>`
         }
         document.getElementById("proj").innerHTML = proTab
