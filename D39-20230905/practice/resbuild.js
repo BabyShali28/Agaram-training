@@ -237,15 +237,22 @@ function displayresDetails() {
             datas = JSON.parse(add)
             console.log(datas)
             let htmld = ""
+            let htmltemp=""
             for (i = 0; i < datas.data.length; i++) {
                 htmld = htmld + `<tr>
                     <td>${datas.data[i].id} </td>
                     <td>${datas.data[i].user}</td>
                     <td><button type="button" onclick="remove('${datas.data[i].id}')"> delete</button></td>
-                    <td><a href="page.html?id=${datas.data[i].id}">link</a></td>
+                    <td><a href="template.html?id=${datas.data[i].id}">link</a></td>
                     </tr>`
+                    
+                    htmltemp+` <a href="res.html?id=${datas.data[i].id}">link</a>
+                    <a href="page.html?id=${datas.data[i].id}">link</a>`
+                    console.log(htmltemp)
             }
-            document.getElementById("show").innerHTML = htmld
+            htmltemp=htmltemp
+            // document.getElementById("show").innerHTML = htmld
+            document.getElementById("temp1").innerHTML = htmltemp
         },
 
         error: function (err) {
@@ -307,51 +314,94 @@ function getEBYid(id1) {
             $("#addr").html(datas1.address)
             $("#phn").html(datas1.mobile_no)
             $("#para").html(datas1.extra)
+            $("#birth").html(datas1.dob)
+
+
             let personal = datas1.personal_details
             // console.log(personal)
             $("#fath").html(personal.father_name)
-
+                // ..........skill..........
             let skillget = datas1.skills
-            // console.log(skill)
-
-            let html = ""
+            let htmlsk = ""
             for (i = 0; i < skillget.length; i++) {
                 // console.log(skill[i])
-                html = html + `<li>${skillget[i]}
+                htmlsk = htmlsk + `<li style="margin-bottom:1%;" >${skillget[i]}
                 </li>`
-                // console.log(html)
+                console.log(htmlsk)
 
             }
-            document.getElementById("sskil").innerHTML = html
+            document.getElementById("sskil").innerHTML = htmlsk
+                    //............langu..............
+            let languget = datas1.Languages
+            console.log(languget)
+            let htmllan=""
+            for (i = 0; i < languget.length; i++) {
+                        // console.log(skill[i])
+                        htmllan = htmllan + `<li>${languget[i]}
+                        </li>`
+                        console.log(htmllan)
+        
+                    }
 
-
+            document.getElementById("lang").innerHTML = htmllan  
+            
+            // .........new Educational......
             let edu = datas1.Educational
             console.log(edu)
             let html1 = ""
             for (i = 0; i < edu.length; i++) {
                 console.log(edu[i].inst_name)
-                html1 = html1 + `<tr>
-                            <td>${edu[i].inst_name}</td>
-                            <td>${edu[i].level}</td>
-                            <td>${edu[i].year}</td>
-                            <td>${edu[i].percentage}</td>
+                html1 = html1 + `<ul>
+                            <li><h4>${edu[i].level}<h4></li>
+                            <p>${edu[i].inst_name}</p>
+                            <p>(${edu[i].year})</p>
+                            <p>${edu[i].percentage}</p>
                             
-                         </tr>`
+                         </ul>`
             }
 
             document.getElementById("educat").innerHTML = html1
-// .......project.................
-        proj=datas1.projects
-        console.log(proj)
-        let proTab=""
-        for (i = 0; i<proj.length; i++) {
-            proTab = proTab + `<tr>
-                            <td>${proj[i].title}</td>
-                            <td>${proj[i].desc}</td>
-                            <td>${proj[i].yr}</td>
-                         </tr>`
-        }
-        document.getElementById("proj").innerHTML = proTab
+                    // .........old Education......
+            // let edu = datas1.Educational
+            // console.log(edu)
+            // let html1 = ""
+            // for (i = 0; i < edu.length; i++) {
+            //     console.log(edu[i].inst_name)
+            //     html1 = html1 + `<tr>
+            //                 <td>${edu[i].inst_name}</td>
+            //                 <td>${edu[i].level}</td>
+            //                 <td>${edu[i].year}</td>
+            //                 <td>${edu[i].percentage}</td>
+                            
+            //              </tr>`
+            // }
+
+            // document.getElementById("educat").innerHTML = html1
+// .......old project.................
+        // proj=datas1.projects
+        // console.log(proj)
+        // let proTab=""
+        // for (i = 0; i<proj.length; i++) {
+        //     proTab = proTab + `<tr>
+        //                     <td>${proj[i].title}</td>
+        //                     <td>${proj[i].desc}</td>
+        //                     <td>${proj[i].yr}</td>
+        //                  </tr>`
+        // }
+        // document.getElementById("proj").innerHTML = proTab
+// .................new project..............
+    proj=datas1.projects
+    console.log(proj)
+    let proTab=""
+    for (i = 0; i<proj.length; i++) {
+        proTab = proTab + `<ul>
+                    <li><h4>${proj[i].title}</h4></li>
+                    <p>${proj[i].desc}</p>
+                    <p>${proj[i].yr}</p>
+                 </ul>`
+    }
+    document.getElementById("proj").innerHTML = proTab  
+
 
         },
         error: function (err) {
@@ -373,3 +423,18 @@ function download() {
     // Choose the element that our invoice is rendered in.
     html2pdf().set(opt).from(page).save();
 }
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};

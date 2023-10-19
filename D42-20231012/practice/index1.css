@@ -1,3 +1,41 @@
 .container{
-    margin-left:30%;
+    margin-left:20%;
+    margin-top:10%;
+}
+button{
+    margin-left:80%;
+    /* color: darkgoldenrod; */
+}
+#butt{
+    background-color: rgb(224, 167, 21);
+}
+/* .black{
+    margin-top:10%;
+    margin-left:12%;
+    margin-right:25%;
+    background-color: darkslategray;
+    /* padding:1px; */
+    /* height:40%; */ 
+    
+    /* top:10px;
+    left:1px; */
+/* } */
+.log{
+    margin:10px 10px 10px 10px;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+img{
+    position:relative;
+    /* padding:50%; */
+    height:100%;
+    width:100%;
+}
+h4{
+    color: azure;
+}
+.black{
+    background-color: dimgrey;
+    
 }

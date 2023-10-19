@@ -5,13 +5,17 @@
         <!-- <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script> -->
         <!-- <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script> -->
     </head>
-    <body class="text-bg-info p-3">
-        <div class="container">
-        <form id="loginform">
+    <body >
+      <div class="img"> 
+        <img src="https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+      
+        <!-- <div class="container"> -->
+          <div class="black">
+          <div class="log">
+          <h4>Sign in</h4>
+         <!-- <form id="loginform">
             
-            <!-- mail_id<input type="email" id="gmail1"><br><br>
-            password<input type="password" id="password1"><br><br>
-            <button type="button" class="btn btn-secondary btn-lg" onclick="login()">login</button> -->
+            
             <div class="col col-lg-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address:</label>
                 <input type="email" class="form-control" id="gmail1" >
@@ -22,11 +26,34 @@
               </div>
               <br>
               <div class="col col-lg-3">
-                <!-- <label for="exampleFormControlInput1" class="form-label">Email address:</label> -->
                 <button type="button" class="btn btn-primary btn-lg" onclick="login()" >submit</button>
               </div>
             
-        </form>
+        </form> -->
+        <div class="mb-3 row">
+          <!-- <label for="inputmail" class="col-sm-2 col-form-label">Email</label> -->
+          <div class="col-sm-6">
+            <input type="email" class="form-control" id="gmail1" placeholder="@gmail.com">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <!-- <label for="inputPassword" class="col-sm-2 col-form-label">Password</label> -->
+          <div class="col-sm-6">
+            <input type="password" class="form-control" id="password1" placeholder="password">
+          </div>
+        </div>
+
+        <!-- <div class="mb-3 row"> -->
+          <!-- <label for="button" class="col-sm-2 col-form-label">login</label> -->
+          <div class="col-sm-3">
+            <button type="button" id="butt" class="form-control"  onclick="login()">login</button>
+          </div>
+          <!-- ........................ -->
+        </div>
+        
+      </div>
+    <!-- </div> -->
     </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
