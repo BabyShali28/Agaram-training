@@ -243,15 +243,17 @@ function displayresDetails() {
                     <td>${datas.data[i].id} </td>
                     <td>${datas.data[i].user}</td>
                     <td><button type="button" onclick="remove('${datas.data[i].id}')"> delete</button></td>
-                    <td><a href="template.html?id=${datas.data[i].id}">link</a></td>
+                    <td><a href="res.html?id=${datas.data[i].id}">link</a></td>
+                    <td><a href="page.html?id=${datas.data[i].id}">link</a></td>
+
                     </tr>`
                     
-                    htmltemp+` <a href="res.html?id=${datas.data[i].id}">link</a>
-                    <a href="page.html?id=${datas.data[i].id}">link</a>`
-                    console.log(htmltemp)
+                    // htmltemp+` <a href="res.html?id=${datas.data[i].id}">link</a>
+                    // <a href="page.html?id=${datas.data[i].id}">link</a>`
+                    // console.log(htmltemp)
             }
             htmltemp=htmltemp
-            // document.getElementById("show").innerHTML = htmld
+            document.getElementById("show").innerHTML = htmld
             document.getElementById("temp1").innerHTML = htmltemp
         },
 

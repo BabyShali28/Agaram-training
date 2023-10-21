@@ -1,0 +1,46 @@
+img{
+    width:100%;
+
+}
+#p1{
+    background-color: antiquewhite;
+    /* margin:5% 5%; */
+    border-radius :50px;
+}
+#absol{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#im{
+    position: relative;
+    
+}
+#con1{
+    border-radius :50px;
+    background-color: antiquewhite;
+}
+#name{
+    margin-left: 25%;
+}
+#nameinner{
+    margin:0% 10%;
+}
+#edu2{
+    background-color: antiquewhite;
+    border-radius :50px;
+
+}
+#total{
+    margin:5% 5%;
+    
+
+}
+#p3{
+    background-color: azure;
+    border-radius :50px;
+
+}
+#eduhead{
+    margin-left:10%;
+}
