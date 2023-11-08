@@ -19,6 +19,11 @@ img{
 #con1{
     border-radius :50px;
     background-color: antiquewhite;
+    
+}
+#conbody{
+    margin-left:35%;
+
 }
 #name{
     margin-left: 25%;
@@ -41,6 +46,10 @@ img{
     border-radius :50px;
 
 }
-#eduhead{
-    margin-left:10%;
+/* #eduhead{
+    margin-left:30%;
+} */
+#skillbody{
+    margin-left:35%;
+
 }

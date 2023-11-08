@@ -1,0 +1,185 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="resbuild.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+        <form>
+            <h2>resume builder</h2>
+            <!-- name<input type ="text" placeholder="enter name" name="name" onkeyup="test(this)">
+            email<input type="email" placeholder="enter mail" name="email" onkeyup="test(this)"> -->
+            <div class="mb-3 row">
+                <label  class="col-sm-2 col-form-label">name</label>
+                <div class="col-sm-10">
+                  <input type="name" name="name" class="form-control" onkeyup="test(this)" placeholder="capital letters">
+                </div>
+                <label  class="col-sm-2 col-form-label">email</label>
+                <div class="col-sm-10">
+                  <input type="email" name="email"class="form-control" onkeyup="test(this)">
+                </div>
+                <label  class="col-sm-2 col-form-label">address</label>
+                <div class="col-sm-10">
+                  <input type="text" name="address"class="form-control" onkeyup="test(this)">
+                </div>
+
+                <label  class="col-sm-2 col-form-label">mobile:no</label>
+                <div class="col-sm-10">
+                  <input type="number" name="mobile_no"class="form-control" onkeyup="test(this)">
+                </div>
+                <label  class="form-label">objective</label>
+                <textarea class="form-control" type="textarea" name="objective" rows="2" onkeyup="test(this)"></textarea>
+
+                <!-- <label  class="form-label">extra Activities</label>
+                <textarea class="form-control" type="textarea" name="extra" rows="2" onkeyup="test(this)"></textarea> -->
+
+              </div>
+
+               
+
+            <div >
+                <h3>personal details</h3>
+
+                <label  class="col-sm-2 col-form-label">father name</label>
+                <div class="col-sm-10">
+                  <input type="name" name="father_name" class="form-control" onkeyup="test(this,'personal_details')" >
+                </div>
+
+                <label  class="col-sm-2 col-form-label">mother name</label>
+                <div class="col-sm-10">
+                  <input type="name" name="mother_name" class="form-control" onkeyup="test(this,'personal_details')" >
+                </div>
+
+                <label  class="col-sm-2 col-form-label">date of birth</label>
+                <div class="col-sm-10">
+                  <input type="date" name="dob" class="form-control" onchange="test(this,'personal_details')" >
+                </div>
+
+                <!-- <select class="form-select" aria-label="Disabled select example" onchange="test(this,'personal_details')" disabled>
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select> -->
+            </div>
+
+      <!-- <<<<<<<<<,skills>>>>........................ -->
+            <div class="mb-3 row">
+              <label  class="col-sm-2 col-form-label">skills</label>
+              <div class="col-sm-10">
+                <input type="text" id="skill_name" class="form-control">
+                <button class="btn btn-info" type="button" onclick="multiple_data('skills','skill_name','lis')">add</button><br><br>
+                <div class="d-flex flex-row flex-wrap" gap=10px id="lis"></div>
+              </div>
+            </div>
+                            <!-- ...langu..... -->
+            <div class="mb-3 row">
+              <label  class="col-sm-2 col-form-label">Languages</label>
+              <div class="col-sm-10">
+                <input type="text" id="language" class="form-control">
+                <button class="btn btn-info" type="button" onclick="multiple_data('Languages','language','lis1')">add</button><br>
+                <div class="d-flex flex-row flex-wrap" gap=10px id="lis1"></div>
+              </div>
+            </div>
+            <!-- >>>>>>>>>>>>educational>>>>>>>>>.... -->
+            <div class="mb-3 row">
+              <label  class="col-sm-1 col-form-label">Educational Qualification</label>
+              <div class="col-sm-1">
+                <input type="text" id="inst_name" name="inst_name" class="form-control" placeholder="institute name" onkeyup="mularrayhandle(this)">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" id ="level" name="level" class="form-control" placeholder="level" onkeyup="mularrayhandle(this)">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" id="year" name="year" class="form-control" placeholder="year" onkeyup="mularrayhandle(this)">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" id="percentage" name="percentage" class="form-control" placeholder="percentage" onkeyup="mularrayhandle(this)">
+              </div>
+              <div class="col-sm-2">
+                <button class="btn btn-info" type="button" onclick="multiple_data('Educational')">add</button>
+              </div>
+                <div class="d-flex flex-row flex-wrap" gap=10px id="list"></div>
+              </div>
+
+
+
+              <!-- .........edu dis.... -->
+              <div class="d-flex flex-row flex-wrap">
+                  <table class="table table-success table-striped" border="1" >
+                    <thead>
+                      <tr>
+                        <th>institute</th>
+                        <th>level</th>
+                        <th>year</th>
+                        <th>percentage</th>
+                        <th>remove</th>
+                      </tr>
+                    </thead>
+                    <tbody id="Educational"></tbody>
+                  </table>
+              </div>
+            <!-- ............edu........ -->
+
+              <!-- .............project>............... -->
+
+<div class="mb-3 row">
+  <label  class="col-sm-1 col-form-label">project details </label>
+  <div class="col-sm-1">
+    <input type="text" id="title" name="title" class="form-control" placeholder="proj_title" onkeyup="mularrayhandle(this)">
+  </div>
+  <div class="col-sm-1">
+    <input type="text" id ="desc" name="desc" class="form-control" placeholder="description" onkeyup="mularrayhandle(this)">
+  </div>
+  <div class="col-sm-1">
+    <input type="text" id="yr" name="yr" class="form-control" placeholder="year" onkeyup="mularrayhandle(this)">
+  </div>
+  
+  <div class="col-sm-2">
+    <button class="btn btn-info" type="button" onclick="multiple_data('projects')">add</button>
+  </div>
+    <div class="d-flex flex-row flex-wrap" gap=10px id="list1"></div>
+  </div>
+
+  <div class="d-flex flex-row flex-wrap">
+    <table class="table table-success table-striped" border="1" >
+      <thead>
+        <tr>
+          <th>title</th>
+          <th>des</th>
+          <th>year</th>
+          <th>remove</th>
+        </tr>
+      </thead>
+      <tbody id="projects"></tbody>
+    </table>
+</div>
+
+<!-- .....<<<<<<<<<<,project..... -->
+
+              <!-- ..........final submit.... -->
+                <button type="button"  onclick="final()" class="btn btn-primary" id="fin">add</button>
+              
+
+
+
+
+
+
+                        <!-- .........display....... -->
+            <div class="row alert alert-danger">
+                <code><pre id="display"></pre></code>
+            </div>
+                      <!-- ..........display......... -->
+            
+            
+            
+        </form>
+        </div>
+    </body>
+    <script src="resbuild.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
